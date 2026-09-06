@@ -1,0 +1,106 @@
+#  Healthcare 30-Day Readmission Prediction
+
+##  Project Overview
+
+This project develops an end-to-end Machine Learning system to predict whether a patient is likely to be readmitted to the hospital within 30 days.
+
+The project covers data preprocessing, exploratory data analysis, feature engineering, machine learning model development, hyperparameter tuning, evaluation, and prediction.
+
+---
+
+##  Objective
+
+The main objective is to identify patients at higher risk of 30-day hospital readmission using historical healthcare data.
+
+This type of predictive modeling can help healthcare organizations identify high-risk cases and support data-driven planning.
+
+---
+
+##  Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
+- Joblib
+- Google Colab
+- GitHub
+
+---
+
+## 🔎 Exploratory Data Analysis
+
+The following factors were analyzed:
+
+- Age
+- Gender
+- Time spent in hospital
+- Previous inpatient visits
+- Number of medications
+- Laboratory procedures
+- Number of diagnoses
+- Numerical feature correlations
+- Outliers
+- 30-day readmission distribution
+
+---
+
+## 🤖 Machine Learning Models
+
+### 1. Logistic Regression
+
+Used as a baseline classification model.
+
+### 2. Random Forest Classifier
+
+Used to capture nonlinear relationships and estimate feature importance.
+
+### 3. Hyperparameter Tuning
+
+RandomizedSearchCV with 3-fold cross-validation was used to optimize the Random Forest model.
+
+---
+
+## 📊 Final Model Performance
+
+The tuned Random Forest model achieved:
+
+| Metric | Score |
+|---|---:|
+| Accuracy | 64.34% |
+| Precision | 17.76% |
+| Recall | 57.17% |
+| F1 Score | 27.10% |
+| ROC-AUC | 65.24% |
+
+A prediction-threshold analysis was also performed to investigate whether classification performance could be improved for the minority class.
+
+---
+
+##  Feature Importance
+
+Random Forest feature importance was used to identify the most influential features for the prediction task.
+
+---
+
+##  Prediction System
+
+A reusable prediction function was developed that:
+
+1. Accepts patient information
+2. Applies the required preprocessing
+3. Generates a readmission probability
+4. Applies the selected classification threshold
+5. Returns the predicted readmission risk
+
+---
+
+##  Project Structure
+
+```text
+Project_04_Healthcare_Readmission_Prediction/
+│
+├── Healthcare Readmission prediction.ipynb
+├── README.md
+└── requirements.txt
